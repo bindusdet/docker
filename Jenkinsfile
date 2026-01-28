@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     environment{
-        IMAGE_NAME='bindusdet/docker-app:${GIT_COMMIT}'
+        IMAGE_NAME='bindusdet/chatbot:${GIT_COMMIT}'
     }
 
     stages{
@@ -15,7 +15,7 @@ pipeline{
             steps{
                 sh'''
                 printenv 
-                docker build -t $IMAGE_NAME .
+                docker build -t ${IMAGE_NAME} .
                 '''
             }
         }
