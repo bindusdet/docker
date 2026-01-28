@@ -1,5 +1,5 @@
 pipeline{
-    any agent
+    agent any
 
     environment{
         IMAGE_NAME='bindusdet/docker-app:${GIT_COMMIT}'
